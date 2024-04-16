@@ -13,7 +13,7 @@ import { PostagemModule } from './postagem/postagem.module';
       port: 3306,
       username: 'root',
       password: 'rootroot',
-      database: 'db_blogpessoal',
+      database: 'db_blogpessoalnew',
       entities: [Postagem],
       synchronize: true,
     }), //Pode ser que eu precise remover essa vírgula depois.
