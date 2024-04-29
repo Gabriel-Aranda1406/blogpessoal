@@ -98,4 +98,16 @@ describe('Testes dos Módulos Usuario e Auth (e2e)', () => {
     })
 
   })
+
+  it("Deve buscar um Usuário por ID", async () => {
+    const userId = 1;
+
+    return request(app.getHttpServer())
+    .get(`/usuarios/${userId}`)
+    .set('Authorization', `${token}`)
+    .expect(200)
+    .then(resposta => {
+      expect(resposta.body.id).toEqual(userId); 
+    })
+  })
 });
