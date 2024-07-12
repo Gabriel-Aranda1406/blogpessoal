@@ -8,11 +8,11 @@ import { ApiProperty } from "@nestjs/swagger";
 export class Postagem{
 
     @ApiProperty()
-    @PrimaryGeneratedColumn() //Define a chave primária e auto incremento
+    @PrimaryGeneratedColumn() 
     id: number;
 
     @ApiProperty()
-    @IsNotEmpty()//Sem espaços em branco
+    @IsNotEmpty()
     @Column({length: 100, nullable: false})
     titulo: string;
 
